@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizLib", "WizLib\WizLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizLib.DataAccess", "WizLib.DataAccess\WizLib.DataAccess.csproj", "{69F6E0CB-6E7B-4DAD-97AD-2801B034BD60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizLib.Model", "WizLib.Model\WizLib.Model.csproj", "{7C159CB3-8591-46FC-B687-76E5182D197E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{69F6E0CB-6E7B-4DAD-97AD-2801B034BD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69F6E0CB-6E7B-4DAD-97AD-2801B034BD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69F6E0CB-6E7B-4DAD-97AD-2801B034BD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C159CB3-8591-46FC-B687-76E5182D197E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C159CB3-8591-46FC-B687-76E5182D197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C159CB3-8591-46FC-B687-76E5182D197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C159CB3-8591-46FC-B687-76E5182D197E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
