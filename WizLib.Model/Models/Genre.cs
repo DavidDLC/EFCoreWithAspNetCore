@@ -12,7 +12,7 @@ namespace WizLib.Model.Models
 
         public string GenreName { get; set; }
 
-        public int DisplayOrder { get; set; }
+        //public int DisplayOrder { get; set; }
 
     }
 }
