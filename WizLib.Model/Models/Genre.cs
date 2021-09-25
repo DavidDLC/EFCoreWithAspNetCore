@@ -12,5 +12,7 @@ namespace WizLib.Model.Models
 
         public string Name { get; set; }
 
+        public int DisplayOrder { get; set; }
+
     }
 }
