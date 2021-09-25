@@ -1,0 +1,4 @@
+﻿Migrations 
+	change Or create model => add migraton => apply migrations
+
+command migration 	

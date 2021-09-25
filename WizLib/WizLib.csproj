@@ -16,4 +16,10 @@
     <ProjectReference Include="..\WizLib.Model\WizLib.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Commands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
