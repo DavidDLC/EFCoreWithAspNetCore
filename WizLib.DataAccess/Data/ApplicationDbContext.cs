@@ -20,5 +20,10 @@ namespace WizLib.DataAccess.Data
         public DbSet<Genre> Genres { get; set; } //represents or make reference to a Table
 
         public DbSet<Book> Books { get; set; } //represents or make reference to a Table
+
+        public DbSet<Author> Authors { get; set; } //represents or make reference to a Table
+
+        public DbSet<Publisher> Publishers { get; set; } //represents or make reference to a Table
+
     }
 }
