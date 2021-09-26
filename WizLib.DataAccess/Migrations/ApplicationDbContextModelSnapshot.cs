@@ -27,7 +27,8 @@ namespace WizLib.DataAccess.Migrations
 
                     b.Property<string>("ISBN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
@@ -72,7 +73,7 @@ namespace WizLib.DataAccess.Migrations
 
                     b.HasKey("GenreId");
 
-                    b.ToTable("tbl_Genre");
+                    b.ToTable("Genres");
                 });
 #pragma warning restore 612, 618
         }

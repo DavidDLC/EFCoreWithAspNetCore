@@ -9,8 +9,8 @@ using WizLib.DataAccess.Data;
 namespace WizLib.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210925204946_AddDisplyaOrderToGenreTable")]
-    partial class AddDisplyaOrderToGenreTable
+    [Migration("20210926213025_init_DataAnnotation")]
+    partial class init_DataAnnotation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,30 @@ namespace WizLib.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("WizLib.Model.Models.Book", b =>
+                {
+                    b.Property<int>("Book_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ISBN")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Book_Id");
+
+                    b.ToTable("Books");
+                });
 
             modelBuilder.Entity("WizLib.Model.Models.Category", b =>
                 {
@@ -45,8 +69,9 @@ namespace WizLib.DataAccess.Migrations
                     b.Property<int>("DisplayOrder")
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("GenreName")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Name");
 
                     b.HasKey("GenreId");
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WizLib.Model.Models
 {
-    [Table("tbl_Genre")]
+    //[Table("tbl_Genre")]
     public class Genre
     {
         public int GenreId { get; set; }
