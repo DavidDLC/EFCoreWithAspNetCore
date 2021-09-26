@@ -41,5 +41,6 @@ namespace WizLib.Model.Models
         [NotMapped]
         public string PrinceRange { get; set; }
 
+        public IList<BookAuthor> BookAuthors { get; set; } //many to many
     }
 }

@@ -25,7 +25,10 @@ namespace WizLib.Model.Models
 
         public DateTime BirthDate { get; set; }
 
+
         public string Location { get; set; }
+
+        public IList<BookAuthor> BookAuthors { get; set; } //many to many
 
         [NotMapped]
         public string FullName
@@ -36,5 +39,6 @@ namespace WizLib.Model.Models
             }
 
         }
+        
     }
 }

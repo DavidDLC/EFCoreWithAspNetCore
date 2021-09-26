@@ -27,5 +27,15 @@ namespace WizLib.DataAccess.Data
 
         public DbSet<Publisher> Publishers { get; set; } //represents or make reference to a Table
 
+        public DbSet<BookAuthor> BookAuthors { get; set; } //represents or make reference to a Table
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //configure FluenAPI, many to many only can be done with fluenAPI
+            //compositive key
+
+            modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
+        }
+
     }
 }
