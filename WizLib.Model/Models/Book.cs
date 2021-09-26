@@ -33,6 +33,11 @@ namespace WizLib.Model.Models
 
         public BookDetail BookDetail { get; set; }//navigation propertys
 
+        //one to many relatioship
+        [ForeignKey("Publisher")]
+        public int Publisher_Id { get; set; } // one to many
+        public Publisher Publisher { get; set; } // one to many
+        
         [NotMapped]
         public string PrinceRange { get; set; }
 
