@@ -23,6 +23,16 @@ namespace WizLib.Model.Models
         [Required]
         public double Price { get; set; }
 
+
+        //public Category category { get; set; } //this will create a foreingkey auto
+
+
+        //this is another way
+        [ForeignKey("Category")] //reference to Table
+        public int Category_Id { get; set; }
+
+        public Category Category { get; set; }//navigation propertys
+
         [NotMapped]
         public string PrinceRange { get; set; }
 
