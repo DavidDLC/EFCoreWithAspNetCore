@@ -28,10 +28,10 @@ namespace WizLib.Model.Models
 
 
         //this is another way
-        [ForeignKey("Category")] //reference to Table
-        public int Category_Id { get; set; }
+        [ForeignKey("BookDetail")] //reference to Table
+        public int BookDetail_Id { get; set; }
 
-        public Category Category { get; set; }//navigation propertys
+        public BookDetail BookDetail { get; set; }//navigation propertys
 
         [NotMapped]
         public string PrinceRange { get; set; }
