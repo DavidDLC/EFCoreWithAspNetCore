@@ -18,5 +18,7 @@ namespace WizLib.DataAccess.Data
         public DbSet<Category> Categories { get; set; } //represents or make reference to a Table
 
         public DbSet<Genre> Genres { get; set; } //represents or make reference to a Table
+
+        public DbSet<Book> Books { get; set; } //represents or make reference to a Table
     }
 }
