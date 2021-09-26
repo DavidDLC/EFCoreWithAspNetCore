@@ -11,6 +11,10 @@ namespace WizLib.Model.Models
     public class Author
     {
         [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)] // this is by default
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)] // the DB does not generate value 
+        //[DatabaseGenerated(DatabaseGeneratedOption.Computed)] // this row is genrated when data is inserted on DB
+
         public int Author_Id { get; set; }
 
         [Required]
