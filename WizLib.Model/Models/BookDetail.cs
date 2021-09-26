@@ -20,7 +20,7 @@ namespace WizLib.Model.Models
 
         public double weight { get; set; }
 
-        public Book Book { get; set; }
+        public Book Book { get; set; }//this is for one to one relationship
 
 
 
