@@ -29,6 +29,15 @@ namespace WizLib.DataAccess.Data
 
         public DbSet<BookAuthor> BookAuthors { get; set; } //represents or make reference to a Table
 
+        public DbSet<Fluent_BookDetail> Fluent_BookDetails { get; set; } //represents or make reference to a Table
+
+        //public DbSet<Fluent_Book> Fluent_Books { get; set; } //represents or make reference to a Table
+
+        //public DbSet<Fluent_Author> Fluent_Authors { get; set; } //represents or make reference to a Table
+
+        //public DbSet<Fluent_Publisher> Fluent_Publishers { get; set; } //represents or make reference to a Table
+
+        //public DbSet<Fluent_BookAuthor> Fluent_BookAuthors { get; set; } //represents or make reference to a Table
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //configure FluenAPI, many to many only can be done with fluenAPI
@@ -38,6 +47,10 @@ namespace WizLib.DataAccess.Data
 
             //fluent API configurations goes here
 
+            //BookDetails
+            modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_Id);
+            modelBuilder.Entity<Fluent_BookDetail>().Property(x => x.NumberOfChapters).IsRequired();
+            
 
         }
 
