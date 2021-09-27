@@ -18,5 +18,7 @@ namespace WizLib.Model.Models
         
         public string Location { get; set; }
 
+        public IList<Fluent_Book> Fluent_Books { get; set; }
+
     }
 }

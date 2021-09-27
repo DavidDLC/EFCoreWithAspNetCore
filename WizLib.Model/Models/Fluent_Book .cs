@@ -26,5 +26,9 @@ namespace WizLib.Model.Models
         public int BookDetail_Id { get; set; }
 
         public Fluent_BookDetail Fluent_BookDetail { get; set; }//navigation propertys
+
+        public int Publisher_Id { get; set; }
+
+        public Fluent_Publisher Fluent_Publisher { get; set; }//navigation propertys
     }
 }
