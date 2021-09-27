@@ -25,7 +25,7 @@ namespace WizLib.Model.Models
         public string Location { get; set; }
 
 
-        [NotMapped]
+        
         public string FullName
         {
             get

@@ -20,7 +20,7 @@ namespace WizLib.Model.Models
 
         public double Price { get; set; }
         
-        [NotMapped]
+        
         public string PrinceRange { get; set; }
 
         
