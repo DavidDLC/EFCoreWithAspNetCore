@@ -35,6 +35,10 @@ namespace WizLib.DataAccess.Data
             //compositive key
 
             modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
+
+            //fluent API configurations goes here
+
+
         }
 
     }
