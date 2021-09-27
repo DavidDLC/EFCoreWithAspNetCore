@@ -23,6 +23,8 @@ namespace WizLib.Model.Models
         
         public string PrinceRange { get; set; }
 
-        
+        public int BookDetail_Id { get; set; }
+
+        public Fluent_BookDetail Fluent_BookDetail { get; set; }//navigation propertys
     }
 }

@@ -76,7 +76,11 @@ namespace WizLib.DataAccess.Data
             modelBuilder.Entity<Fluent_Publisher>().Property(x => x.Name).IsRequired();
             modelBuilder.Entity<Fluent_Publisher>().Property(x => x.Location).IsRequired();
 
-            //
+            // one to one relationship between book and bookdetail
+            modelBuilder.Entity<Fluent_Book>()
+                .HasOne(x => x.Fluent_BookDetail)
+                .WithOne(x => x.Fluent_Book)
+                .HasForeignKey<Fluent_Book>("BookDetail_Id");
 
 
         }
