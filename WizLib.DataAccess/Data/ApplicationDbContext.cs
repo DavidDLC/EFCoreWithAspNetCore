@@ -49,6 +49,10 @@ namespace WizLib.DataAccess.Data
 
             //fluent API configurations goes here
 
+            //category change name and column name with FluentAPI
+            modelBuilder.Entity<Category>().ToTable("Tbl_Category");
+            modelBuilder.Entity<Category>().Property(c => c.Name).HasColumnName("CategoryName");
+
             //BookDetails
             modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_Id);
             modelBuilder.Entity<Fluent_BookDetail>().Property(x => x.NumberOfChapters).IsRequired();
