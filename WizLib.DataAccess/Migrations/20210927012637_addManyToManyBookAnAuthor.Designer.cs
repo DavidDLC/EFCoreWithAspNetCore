@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WizLib.DataAccess.Data;
 
 namespace WizLib.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210927012637_addManyToManyBookAnAuthor")]
+    partial class addManyToManyBookAnAuthor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -203,8 +205,6 @@ namespace WizLib.DataAccess.Migrations
 
                     b.HasKey("Author_Id", "Book_Id");
 
-                    b.HasIndex("Book_Id");
-
                     b.ToTable("Fluent_BookAuthor");
                 });
 
@@ -355,7 +355,7 @@ namespace WizLib.DataAccess.Migrations
 
                     b.HasOne("WizLib.Model.Models.Fluent_Book", "Fluent_Book")
                         .WithMany("Fluent_BookAuthors")
-                        .HasForeignKey("Book_Id")
+                        .HasForeignKey("Author_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

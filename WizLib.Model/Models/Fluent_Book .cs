@@ -30,5 +30,10 @@ namespace WizLib.Model.Models
         public int Publisher_Id { get; set; }
 
         public Fluent_Publisher Fluent_Publisher { get; set; }//navigation propertys
+        
+
+        public ICollection<Fluent_BookAuthor> Fluent_BookAuthors { get; set; }//navigation propertys
+
+
     }
 }

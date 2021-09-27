@@ -25,7 +25,8 @@ namespace WizLib.Model.Models
         public string Location { get; set; }
 
 
-        
+        public ICollection<Fluent_BookAuthor> Fluent_BookAuthors { get; set; }//navigation propertys
+
         public string FullName
         {
             get
